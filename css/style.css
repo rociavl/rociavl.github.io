@@ -1085,6 +1085,19 @@ button:focus-visible {
 
 .project-image { position: relative; }
 
+.project-img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--border-subtle);
+    transition: var(--transition);
+    display: block;
+}
+
+.project-img:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 0 30px var(--card-glow);
+}
+
 .project-image-placeholder {
     background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
     border-radius: 6px;
