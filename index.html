@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocío Ávalos — Biomedical Engineer & AI Researcher</title>
+    <meta name="description" content="Biomedical Engineer developing AI-powered clinical tools at the intersection of machine learning, medical imaging, and computational neuroscience.">
+    <meta name="author" content="Rocío Ávalos">
+
+    <!-- Open Graph / SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rocío Ávalos — Biomedical Engineer & AI Researcher">
+    <meta property="og:description" content="Building AI-powered clinical tools at the intersection of machine learning, medical imaging, and computational neuroscience.">
+    <meta property="og:url" content="https://rociavl.github.io">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon (inline SVG) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='12' width='100' height='100' fill='%230a192f'/><text x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='%2364ffda' text-anchor='middle'>RÁ</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Prevent FOUC: apply saved theme before render -->
+    <script>
+        (function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t)})();
+    </script>
+</head>
+<body>
+    <!-- Skip to content (accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo" aria-label="Home">RÁ</a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link"><span class="nav-number">01.</span> About</a>
+                <a href="#experience" class="nav-link"><span class="nav-number">02.</span> Experience</a>
+                <a href="#research" class="nav-link"><span class="nav-number">03.</span> Research</a>
+                <a href="#projects" class="nav-link"><span class="nav-number">04.</span> Projects</a>
+                <a href="#writing" class="nav-link"><span class="nav-number">05.</span> Writing</a>
+                <a href="#contact" class="nav-link"><span class="nav-number">06.</span> Contact</a>
+                <a href="assets/cv.pdf" class="btn-outline" target="_blank" rel="noopener">CV</a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+        <div class="mobile-menu-links">
+            <a href="#about"><span class="nav-number">01.</span> About</a>
+            <a href="#experience"><span class="nav-number">02.</span> Experience</a>
+            <a href="#research"><span class="nav-number">03.</span> Research</a>
+            <a href="#projects"><span class="nav-number">04.</span> Projects</a>
+            <a href="#writing"><span class="nav-number">05.</span> Writing</a>
+            <a href="#contact"><span class="nav-number">06.</span> Contact</a>
+            <a href="assets/cv.pdf" class="btn-outline" target="_blank" rel="noopener">CV</a>
+            <button class="theme-toggle" id="theme-toggle-mobile" aria-label="Toggle dark/light mode">
+                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Side Elements -->
+    <div class="side-element side-left" aria-hidden="true">
+        <ul class="social-links">
+            <li><a href="https://github.com/rociavl" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a></li>
+            <li><a href="https://www.linkedin.com/in/rocio-avalos-morillas/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a></li>
+            <li><a href="https://scholar.google.com/" target="_blank" rel="noopener" aria-label="Google Scholar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3l10 7 10-7"/><path d="M2 3v11l10 7 10-7V3"/><circle cx="12" cy="16" r="3"/></svg>
+            </a></li>
+            <li><a href="mailto:rocio.avalos029@gmail.com" aria-label="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a></li>
+        </ul>
+    </div>
+
+    <div class="side-element side-right" aria-hidden="true">
+        <a href="mailto:rocio.avalos029@gmail.com" class="side-email">rocio.avalos029@gmail.com</a>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <canvas id="hero-canvas" aria-hidden="true"></canvas>
+            <div class="container">
+                <p class="hero-greeting fade-up">Hi, my name is</p>
+                <h1 class="hero-name fade-up" style="animation-delay: 0.1s">Roc&iacute;o &Aacute;valos.</h1>
+                <h2 class="hero-tagline fade-up" style="animation-delay: 0.2s">
+                    <span id="typing-text"></span><span class="typing-cursor">|</span>
+                </h2>
+                <p class="hero-description fade-up" style="animation-delay: 0.3s">
+                    Biomedical Engineer developing AI-powered clinical tools at the intersection of
+                    <span class="highlight">machine learning</span>, <span class="highlight">medical imaging</span>,
+                    and <span class="highlight">computational neuroscience</span>. Currently pursuing an MSc at
+                    <a href="https://www.upc.edu" target="_blank" rel="noopener">UPC</a> while building
+                    neuroimaging software at
+                    <a href="https://github.com/BrainFocus-devel" target="_blank" rel="noopener">BrainFocus</a>.
+                </p>
+                <div class="hero-cta fade-up" style="animation-delay: 0.4s">
+                    <a href="#projects" class="btn-primary">See my work</a>
+                    <a href="assets/cv.pdf" class="btn-outline" target="_blank" rel="noopener">Download CV</a>
+                </div>
+                <div class="hero-stats fade-up" style="animation-delay: 0.55s">
+                    <div class="stat">
+                        <span class="stat-number" data-target="93.6" data-decimals="1">0</span><span class="stat-suffix">%</span>
+                        <span class="stat-label">Dice Accuracy</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="30" data-decimals="0">0</span><span class="stat-suffix"> min</span>
+                        <span class="stat-label">vs 4+ hrs manual</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="10" data-decimals="0">0</span><span class="stat-suffix">/10</span>
+                        <span class="stat-label">Thesis Grade</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section" id="about">
+            <div class="container">
+                <h2 class="section-heading fade-up"><span class="nav-number">01.</span> About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text fade-up">
+                        <p class="about-short-bio">
+                            Biomedical Engineer at
+                            <a href="https://github.com/BrainFocus-devel" target="_blank" rel="noopener">BrainFocus</a>
+                            developing technologies that bridge AI, medical imaging, and computational neuroscience
+                            to advance healthcare. I build tools that help clinicians make better, faster decisions.
+                        </p>
+                        <p>
+                            I have hands-on experience creating deep learning pipelines for
+                            <span class="highlight">CT-based brain segmentation</span>,
+                            <span class="highlight">3D electrode localization</span>, and
+                            <span class="highlight">synthetic biomedical data generation</span>,
+                            as well as designing sensor-based systems for biomarker detection.
+                            My work spans neuroimaging, computational anatomy, and biomedical data science.
+                        </p>
+                        <p>
+                            I thrive in multidisciplinary teams, collaborating with clinicians, researchers,
+                            and engineers to deliver solutions that are both technically robust and clinically
+                            meaningful. All my tools and pipelines are publicly available on
+                            <a href="https://github.com/rociavl" target="_blank" rel="noopener">GitHub</a>.
+                        </p>
+
+                        <div class="now-section">
+                            <h3 class="now-title">What I'm focused on now</h3>
+                            <ul class="now-list">
+                                <li>Building multimodal neuroimaging pipelines at BrainFocus (MRI, CT, EEG/SEEG)</li>
+                                <li>MSc in Advanced Biomedical Technologies at UPC</li>
+                                <li>Creating interactive visualization tools for brain mapping and epilepsy diagnostics</li>
+                            </ul>
+                        </div>
+
+                        <p>Technologies I work with daily:</p>
+                        <ul class="tech-list">
+                            <li>Python</li>
+                            <li>PyTorch</li>
+                            <li>TensorFlow</li>
+                            <li>MONAI</li>
+                            <li>3D Slicer</li>
+                            <li>scikit-learn</li>
+                            <li>MATLAB</li>
+                            <li>R / SQL</li>
+                        </ul>
+                    </div>
+                    <div class="about-image fade-up">
+                        <div class="image-wrapper">
+                            <!-- Replace with: <img src="assets/photo.jpg" alt="Rocío Ávalos" /> -->
+                            <div class="image-placeholder">
+                                <span>RÁ</span>
+                            </div>
+                            <div class="image-border"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section class="section" id="experience">
+            <div class="container">
+                <h2 class="section-heading fade-up"><span class="nav-number">02.</span> Experience & Education</h2>
+
+                <div class="exp-tabs fade-up">
+                    <button class="exp-tab active" data-tab="work" aria-selected="true">Experience</button>
+                    <button class="exp-tab" data-tab="education" aria-selected="false">Education</button>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="exp-panel" id="panel-work">
+                    <div class="timeline">
+                        <div class="timeline-item fade-up">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3 class="timeline-title">Biomedical Engineer</h3>
+                                    <span class="timeline-date">Sep 2025 &mdash; Present</span>
+                                </div>
+                                <p class="timeline-company">
+                                    <a href="https://github.com/BrainFocus-devel" target="_blank" rel="noopener">BrainFocus</a> · Full-time
+                                </p>
+                                <p class="timeline-desc">
+                                    Contributing to R&amp;D of medical software, building multimodal neuroimaging
+                                    pipelines integrating MRI, CT, and EEG/SEEG data. Developing and optimizing
+                                    algorithms for signal analysis, electrode localization, and brain mapping.
+                                    Translating advanced neuroimaging methods into clinical-ready software for
+                                    epilepsy diagnostics and brain mapping workflows.
+                                </p>
+                                <ul class="timeline-tags">
+                                    <li>Medical Imaging</li>
+                                    <li>Signal Processing</li>
+                                    <li>Python</li>
+                                    <li>AI/ML</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item fade-up">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3 class="timeline-title">Machine Learning Research Assistant</h3>
+                                    <span class="timeline-date">Feb 2025 &mdash; Sep 2025</span>
+                                </div>
+                                <p class="timeline-company">
+                                    <a href="https://www.imim.cat/" target="_blank" rel="noopener">Hospital del Mar Research Institute</a>
+                                    · Center for Brain and Cognition (UPF)
+                                </p>
+                                <p class="timeline-desc">
+                                    Conducted applied research on automatic segmentation and localization of intracranial
+                                    SEEG electrodes from post-operative CT scans. Developed a 3D Slicer extension with
+                                    full pre/post-processing pipelines. Built and evaluated ML models for electrode
+                                    detection classification and threshold-learning for cross-patient generalization.
+                                </p>
+                                <ul class="timeline-tags">
+                                    <li>3D Slicer</li>
+                                    <li>Deep Learning</li>
+                                    <li>SEEG</li>
+                                    <li>MONAI</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item fade-up">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3 class="timeline-title">Healthcare Data Analyst</h3>
+                                    <span class="timeline-date">Oct 2024 &mdash; Jan 2025</span>
+                                </div>
+                                <p class="timeline-company">
+                                    Hospital del Mar · Information Systems &amp; Communications
+                                </p>
+                                <p class="timeline-desc">
+                                    Managed data inventory, analysis, and storage to support project management
+                                    and operational efficiency. Collaborated directly with doctors to streamline
+                                    data flow. Organized medical device inventory databases and generated insightful
+                                    reports from the hospital's information system.
+                                </p>
+                                <ul class="timeline-tags">
+                                    <li>Data Analysis</li>
+                                    <li>SQL</li>
+                                    <li>Jira</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item fade-up">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3 class="timeline-title">Biomedical Engineer &middot; SensUs Competition</h3>
+                                    <span class="timeline-date">Nov 2023 &mdash; Aug 2024</span>
+                                </div>
+                                <p class="timeline-company">
+                                    Bioneer UPC · SensUs Student Competition, Eindhoven
+                                </p>
+                                <p class="timeline-desc">
+                                    Developed a continuous creatinine biosensor utilizing a colorimetric microfluidic
+                                    system. Represented Catalonia and Spain at the international SensUs competition
+                                    in Eindhoven. Contributed to both technical development and strategic planning
+                                    in a multidisciplinary team.
+                                </p>
+                                <ul class="timeline-tags">
+                                    <li>Biosensors</li>
+                                    <li>Microfluidics</li>
+                                    <li>Raspberry Pi</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="exp-panel hidden" id="panel-education">
+                    <div class="education-grid fade-up">
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                            </div>
+                            <div class="education-details">
+                                <h3 class="education-degree">Master of Science</h3>
+                                <p class="education-field">Advanced Biomedical Technologies</p>
+                                <p class="education-school">Universitat Polit&egrave;cnica de Catalunya</p>
+                                <p class="education-year">2025 &mdash; 2026</p>
+                                <ul class="education-tags">
+                                    <li>Computer Vision</li>
+                                    <li>Numerical Analysis</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                            </div>
+                            <div class="education-details">
+                                <h3 class="education-degree">Bachelor's Degree</h3>
+                                <p class="education-field">Biomedical Engineering</p>
+                                <p class="education-school">Universitat Polit&egrave;cnica de Catalunya</p>
+                                <p class="education-year">2021 &mdash; 2025</p>
+                                <div class="education-highlight">
+                                    <span class="highlight-badge">Thesis: 10/10 with Honors</span>
+                                </div>
+                                <ul class="education-tags">
+                                    <li>AI in Healthcare</li>
+                                    <li>Medical Imaging</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="cert-title fade-up">Certifications</h3>
+                    <div class="cert-grid fade-up">
+                        <div class="cert-item">
+                            <span class="cert-name">Neural Networks and Deep Learning</span>
+                            <span class="cert-issuer">DeepLearning.AI &middot; Aug 2025</span>
+                        </div>
+                        <div class="cert-item">
+                            <span class="cert-name">Finding Mutations in DNA and Proteins</span>
+                            <span class="cert-issuer">UC San Diego &middot; Nov 2024 &middot; With Honors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Interests Section -->
+        <section class="section" id="research">
+            <div class="container">
+                <h2 class="section-heading fade-up"><span class="nav-number">03.</span> Research Interests</h2>
+                <p class="research-intro fade-up">
+                    My research focuses on building reliable, clinically-validated AI systems.
+                    These are the areas where I believe computation can most meaningfully
+                    improve patient care.
+                </p>
+                <div class="research-grid">
+                    <div class="research-card fade-up">
+                        <div class="research-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                        </div>
+                        <h3 class="research-card-title">Medical Image Analysis</h3>
+                        <p class="research-card-desc">
+                            Automated segmentation and localization in CT, MRI, and X-ray.
+                            Building pipelines that reduce manual annotation from hours to minutes
+                            while maintaining clinical-grade accuracy (93.6% Dice on brain extraction).
+                        </p>
+                        <ul class="research-card-tags">
+                            <li>3D Segmentation</li>
+                            <li>CT / MRI</li>
+                            <li>MONAI</li>
+                        </ul>
+                    </div>
+                    <div class="research-card fade-up">
+                        <div class="research-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <h3 class="research-card-title">Computational Neuroscience</h3>
+                        <p class="research-card-desc">
+                            Tools for epilepsy surgery planning, including automated SEEG electrode
+                            localization and brain region mapping. Pipeline deployed at Hospital del Mar's
+                            Epilepsy Unit, translating algorithms into clinical practice.
+                        </p>
+                        <ul class="research-card-tags">
+                            <li>SEEG</li>
+                            <li>3D Slicer</li>
+                            <li>BrainFocus</li>
+                        </ul>
+                    </div>
+                    <div class="research-card fade-up">
+                        <div class="research-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3 class="research-card-title">Generative Models for Healthcare</h3>
+                        <p class="research-card-desc">
+                            Using GANs, VAEs, and diffusion models to generate synthetic patient
+                            cohorts for rare diseases. Addressing the critical gap of limited training
+                            data while preserving patient privacy.
+                        </p>
+                        <ul class="research-card-tags">
+                            <li>GANs</li>
+                            <li>Diffusion Models</li>
+                            <li>Synthetic Data</li>
+                        </ul>
+                    </div>
+                    <div class="research-card fade-up">
+                        <div class="research-card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <h3 class="research-card-title">Biomedical Sensors &amp; Bioinformatics</h3>
+                        <p class="research-card-desc">
+                            Designing sensor-based systems for biomarker detection and building
+                            reproducible genomics pipelines. Applying machine learning to clinical
+                            datasets for disease prediction and risk stratification.
+                        </p>
+                        <ul class="research-card-tags">
+                            <li>Biosensors</li>
+                            <li>Genomics</li>
+                            <li>Clinical ML</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+            <div class="container">
+                <h2 class="section-heading fade-up"><span class="nav-number">04.</span> Featured Projects</h2>
+
+                <!-- Featured Project 1 — SlicerSEEG -->
+                <article class="featured-project fade-up">
+                    <div class="project-content">
+                        <p class="project-overline">Featured Project &middot; Deployed at Hospital del Mar</p>
+                        <h3 class="project-title">
+                            <a href="https://github.com/rociavl/SlicerSEEG" target="_blank" rel="noopener">SlicerSEEG</a>
+                        </h3>
+                        <div class="project-description">
+                            <div class="case-study">
+                                <p><strong class="case-label">Problem:</strong> Neurosurgeons spend 4+ hours per patient manually identifying SEEG electrode positions in post-operative CT scans, creating critical bottlenecks in epilepsy surgery workflows.</p>
+                                <p><strong class="case-label">Approach:</strong> Built a 3D Slicer extension combining a MONAI-based 3D U-Net for brain extraction (93.6% Dice), Random Forest threshold prediction (R&sup2; = 0.99), LightGBM confidence scoring (98.8% within 2mm), and DBSCAN + Louvain clustering for trajectory reconstruction.</p>
+                                <p><strong class="case-label">Impact:</strong> Reduces electrode identification from 4+ hours to ~30 minutes. Now in clinical use at Hospital del Mar's Epilepsy Unit in collaboration with the Center for Brain and Cognition (UPF). Bachelor's thesis graded 10/10 with honors.</p>
+                            </div>
+                        </div>
+                        <ul class="project-tech-list">
+                            <li>Python</li>
+                            <li>3D Slicer</li>
+                            <li>MONAI</li>
+                            <li>LightGBM</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/rociavl/SlicerSEEG" target="_blank" rel="noopener" aria-label="View source on GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <div class="project-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                            </div>
+                            <span>3D Brain Electrode Mapping</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Featured Project 2 — Brain Mask 3D Segmentation -->
+                <article class="featured-project reverse fade-up">
+                    <div class="project-content">
+                        <p class="project-overline">Featured Project &middot; Validated at Hospital del Mar</p>
+                        <h3 class="project-title">
+                            <a href="https://github.com/rociavl" target="_blank" rel="noopener">Brain Mask 3D Segmentation</a>
+                        </h3>
+                        <div class="project-description">
+                            <div class="case-study">
+                                <p><strong class="case-label">Problem:</strong> Post-surgical brain imaging contains artifacts and metallic electrode interference that make accurate brain extraction extremely difficult for standard tools.</p>
+                                <p><strong class="case-label">Approach:</strong> Trained a 3D U-Net using MONAI and PyTorch with leave-one-patient-out validation. Handles CT artifacts and metallic electrode interference through specialized augmentation strategies.</p>
+                                <p><strong class="case-label">Impact:</strong> Achieves 93.6% Dice accuracy, reducing processing time from 4+ hours to under 1 minute. Foundational component supporting neurosurgeons in drug-resistant epilepsy treatment planning. Deployed with a clinical-grade web interface.</p>
+                            </div>
+                        </div>
+                        <ul class="project-tech-list">
+                            <li>PyTorch</li>
+                            <li>MONAI</li>
+                            <li>3D U-Net</li>
+                            <li>Computer Vision</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/rociavl" target="_blank" rel="noopener" aria-label="View source on GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <div class="project-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                            </div>
+                            <span>Volumetric Brain Segmentation</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Featured Project 3 — Synthetic Patient Cohort Generation -->
+                <article class="featured-project fade-up">
+                    <div class="project-content">
+                        <p class="project-overline">Featured Project</p>
+                        <h3 class="project-title">
+                            <a href="https://github.com/rociavl" target="_blank" rel="noopener">Synthetic Patient Cohort Generation</a>
+                        </h3>
+                        <div class="project-description">
+                            <div class="case-study">
+                                <p><strong class="case-label">Problem:</strong> Rare diseases suffer from extremely limited patient datasets, making it nearly impossible to train robust ML models while respecting patient privacy.</p>
+                                <p><strong class="case-label">Approach:</strong> Implemented and compared GANs, VAEs, and diffusion models for generating realistic, privacy-preserving synthetic patient cohorts. Validated synthetic data quality against real clinical distributions.</p>
+                                <p><strong class="case-label">Impact:</strong> Enables researchers to train models on statistically representative synthetic data for rare diseases where real patient data is scarce or restricted.</p>
+                            </div>
+                        </div>
+                        <ul class="project-tech-list">
+                            <li>GANs</li>
+                            <li>VAEs</li>
+                            <li>Diffusion Models</li>
+                            <li>Python</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/rociavl" target="_blank" rel="noopener" aria-label="View source on GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <div class="project-image-placeholder">
+                            <div class="project-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <span>GAN-based Synthetic Cohorts</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Other Projects Grid -->
+                <h3 class="other-projects-title fade-up">Other Noteworthy Projects</h3>
+                <div class="projects-grid">
+                    <article class="project-card fade-up">
+                        <div class="project-card-top">
+                            <div class="folder-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                            </div>
+                            <div class="project-card-links">
+                                <a href="https://github.com/rociavl" target="_blank" rel="noopener" aria-label="GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h4 class="project-card-title">CT Threshold Models</h4>
+                        <p class="project-card-desc">ML ensemble combining Random Forest, LightGBM, and XGBoost for adaptive threshold prediction in CT electrode segmentation. Achieves R&sup2; = 0.99 for cross-patient generalization.</p>
+                        <ul class="project-card-tech">
+                            <li>LightGBM</li>
+                            <li>XGBoost</li>
+                            <li>scikit-learn</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-card fade-up">
+                        <div class="project-card-top">
+                            <div class="folder-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                            </div>
+                            <div class="project-card-links">
+                                <a href="https://github.com/rociavl" target="_blank" rel="noopener" aria-label="GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h4 class="project-card-title">SEEG Auto Segmentation</h4>
+                        <p class="project-card-desc">Deep learning pipeline for automated electrode localization with LightGBM confidence scoring achieving 98.8% accuracy within 2mm. Companion to SlicerSEEG.</p>
+                        <ul class="project-card-tech">
+                            <li>PyTorch</li>
+                            <li>Deep Learning</li>
+                            <li>CT</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-card fade-up">
+                        <div class="project-card-top">
+                            <div class="folder-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                            </div>
+                            <div class="project-card-links">
+                                <a href="https://github.com/rociavl" target="_blank" rel="noopener" aria-label="GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h4 class="project-card-title">CKD Biomarker Discovery</h4>
+                        <p class="project-card-desc">Machine learning for chronic kidney disease prediction and biomarker identification. Feature importance analysis reveals novel clinical risk factors from routine lab data.</p>
+                        <ul class="project-card-tech">
+                            <li>scikit-learn</li>
+                            <li>Pandas</li>
+                            <li>Clinical ML</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-card fade-up">
+                        <div class="project-card-top">
+                            <div class="folder-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                            </div>
+                            <div class="project-card-links">
+                                <a href="https://github.com/rociavl" target="_blank" rel="noopener" aria-label="GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h4 class="project-card-title">Chest X-Ray Classification</h4>
+                        <p class="project-card-desc">Multi-label deep learning model for pathology classification from chest radiographs. Transfer learning from ImageNet with domain-specific fine-tuning for clinical accuracy.</p>
+                        <ul class="project-card-tech">
+                            <li>TensorFlow</li>
+                            <li>Transfer Learning</li>
+                            <li>X-Ray</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-card fade-up">
+                        <div class="project-card-top">
+                            <div class="folder-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                            </div>
+                            <div class="project-card-links">
+                                <a href="https://github.com/rociavl" target="_blank" rel="noopener" aria-label="GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h4 class="project-card-title">Creatinine Biosensor</h4>
+                        <p class="project-card-desc">Continuous creatinine monitoring system using a colorimetric microfluidic platform. Developed for the SensUs international competition in Eindhoven representing Spain.</p>
+                        <ul class="project-card-tech">
+                            <li>Microfluidics</li>
+                            <li>Raspberry Pi</li>
+                            <li>Sensors</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-card fade-up">
+                        <div class="project-card-top">
+                            <div class="folder-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                            </div>
+                            <div class="project-card-links">
+                                <a href="https://github.com/rociavl" target="_blank" rel="noopener" aria-label="GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h4 class="project-card-title">Bioinformatics Pipelines</h4>
+                        <p class="project-card-desc">Reproducible genomics analysis and variant annotation tools. Modular pipeline architecture for processing large-scale sequencing datasets with quality control at every step.</p>
+                        <ul class="project-card-tech">
+                            <li>R</li>
+                            <li>Python</li>
+                            <li>Genomics</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Writing / Blog Section -->
+        <section class="section" id="writing">
+            <div class="container">
+                <h2 class="section-heading fade-up"><span class="nav-number">05.</span> Writing & Publications</h2>
+
+                <!-- Publications -->
+                <div class="writing-subsection fade-up">
+                    <h3 class="writing-subsection-title">Thesis</h3>
+                    <div class="publications-list">
+                        <div class="publication-item">
+                            <div class="publication-year">2025</div>
+                            <div class="publication-content">
+                                <p class="publication-title">Medical Software Module in 3D Slicer for Automatic Segmentation and Trajectory Reconstruction of SEEG Electrodes Using AI and Data Science</p>
+                                <p class="publication-authors">Rocío Ávalos Morillas · Dir: Christian Mata, Justo Montoya-Gálvez, Alessandro Principe</p>
+                                <p class="publication-venue">Bachelor's Thesis, Biomedical Engineering, UPC · <span class="highlight">10/10 with Honors</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Posts -->
+                <div class="writing-subsection fade-up">
+                    <h3 class="writing-subsection-title">Blog</h3>
+                    <p class="writing-intro">
+                        Notes on medical AI, computational neuroscience, and open-source tools.
+                        Technical deep-dives, paper reviews, and lessons learned.
+                    </p>
+                    <div class="blog-grid">
+                        <article class="blog-card">
+                            <div class="blog-card-date">Coming soon</div>
+                            <h4 class="blog-card-title">How to build a 3D Slicer extension for medical imaging</h4>
+                            <p class="blog-card-desc">A practical guide to developing clinical tools with 3D Slicer's Python API, from module creation to GUI design.</p>
+                            <span class="blog-card-read">5 min read</span>
+                        </article>
+                        <article class="blog-card">
+                            <div class="blog-card-date">Coming soon</div>
+                            <h4 class="blog-card-title">Comparing generative models for synthetic medical data</h4>
+                            <p class="blog-card-desc">GANs vs. VAEs vs. Diffusion Models: a practical comparison for healthcare data augmentation with privacy guarantees.</p>
+                            <span class="blog-card-read">8 min read</span>
+                        </article>
+                        <article class="blog-card">
+                            <div class="blog-card-date">Coming soon</div>
+                            <h4 class="blog-card-title">UNet variants for 3D brain segmentation: what actually works</h4>
+                            <p class="blog-card-desc">Lessons from training volumetric segmentation models on post-surgical brain imaging with MONAI.</p>
+                            <span class="blog-card-read">6 min read</span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section section-contact" id="contact">
+            <div class="container">
+                <p class="contact-overline fade-up"><span class="nav-number">06.</span> What's Next?</p>
+                <h2 class="contact-title fade-up">Get In Touch</h2>
+                <p class="contact-description fade-up">
+                    I'm always open to collaborating on projects at the intersection of AI and medicine.
+                    Whether you have a research question, a collaboration idea, or just want to say hi &mdash;
+                    my inbox is open.
+                </p>
+                <div class="contact-links fade-up">
+                    <a href="mailto:rocio.avalos029@gmail.com" class="btn-primary">Say Hello</a>
+                </div>
+                <div class="contact-socials fade-up">
+                    <a href="https://github.com/rociavl" target="_blank" rel="noopener">GitHub</a>
+                    <span class="contact-dot"></span>
+                    <a href="https://www.linkedin.com/in/rocio-avalos-morillas/" target="_blank" rel="noopener">LinkedIn</a>
+                    <span class="contact-dot"></span>
+                    <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <a href="https://github.com/rociavl" target="_blank" rel="noopener" class="footer-credit">
+                Built by Roc&iacute;o &Aacute;valos
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
